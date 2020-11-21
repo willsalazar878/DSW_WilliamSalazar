@@ -1,0 +1,161 @@
+<html>
+
+<head>
+
+<marquee><tittle><FONT FACE="verdana" SIZE=9> Diseños De Paginas Web - UNAD </tittle></marquee>
+
+</head>
+
+
+<body>
+
+<center><strong><p><FONT FACE="verdana" SIZE=9 COLOR=write>Conceptos</p></strong></center>
+
+<body style="background-color:#08254E">
+
+
+<hr size="20" width="1000" color="white">
+<hr size="5" width="900" color="white">
+<P><DIV ALIGN=CENTER><img src="logounad.png" widht="300" height="300" /></DIV></P>
+<hr size="5" width="900" color="white">
+<hr size="20" width="1000" color="white">
+       
+<CENTER><p>
+<A HREF="Inicio.HTML">
+<img src="InicioBoton.png"BORDER="2" ALT= "Autor"></A>
+
+<A HREF="Conceptos.html">
+<img src="ConceptosBoton.png" BORDER="2" ALT= "Conceptos"></A>
+
+<A HREF="Recursos.HTML">
+<img src="RecursosBoton.png"BORDER="2" ALT= "Recursos"></A>
+
+<A HREF="Autoevaluacion.HTML">
+<img src="AutoevaluacionBoton.PNG" BORDER="2" ALT= "Autoevaluacion"></A>
+
+<A HREF="Autor.HTML">
+<img src="AutorBoton.png"BORDER="2" ALT= "Autor"></A>
+
+</p></CENTER>
+
+<hr size="20" width="1000" color="white">
+
+<h2 style="background-color:#FFC100;margin: 150px">
+
+<center><p><FONT FACE="Verdana" SIZE=4>CSS Inline, Interno y Externo</p>
+</center>
+
+<p>Antes de comenzar a trabajar con CSS hay que conocer las diferentes formas para incluir estilos en nuestros documentos HTML, ya que hay varias, cada una con sus particularidades y diferencias.
+</p>
+<p>En principio, tenemos tres formas diferentes de hacerlo, siendo la primera la más común y la última la menos habitual:</p>
+
+<br> <br>
+
+<p><table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Método</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CSS Externo</strong></td>
+<td>Etiqueta <code>&lt;link&gt;</code></td>
+<td>El código se escribe en un archivo <code>.css</code> a parte. <strong>Método más habitual</strong>.</td>
+</tr>
+<tr>
+<td><strong>CSS Interno</strong></td>
+<td>Etiqueta <code>&lt;style&gt;</code></td>
+<td>El código se escribe en una etiqueta <code>&lt;style&gt;</code> en el documento HTML.</td>
+</tr>
+<tr>
+<td><strong>Estilos en línea</strong></td>
+<td>Atributo <code>style="..."</code></td>
+<td>El código se escribe en un atributo HTML de una etiqueta.</td>
+</tr>
+</tbody>
+</table></p>
+<br> <br>
+
+
+<p>Veamos cada una de ellas detalladamente:</p> 
+</p>
+
+
+<center><p><FONT FACE="Verdana" SIZE=4>Enlace a CSS externo</p>
+</center>
+
+<p><p>En la cabecera de nuestro documento HTML, más concretamente en el bloque <code>&lt;head&gt;&lt;/head&gt;</code>, podemos incluir una etiqueta <code>&lt;link&gt;</code> con la que establecemos una relación entre el documento actual y el archivo CSS que indicamos en el atributo <code>href</code>:</p></p>
+<br> <br>
+
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>index.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre>
+
+<p>De esta forma, los navegadores sabrán que deben aplicar los estilos que se encuentren en el archivo index.css. Se aconseja escribir esta línea lo antes posible (sobre todo, antes de los scripts), obligando así al navegador a aplicar los estilos cuanto antes y eliminar la falsa percepción visual de que la página está en blanco y no ha sido cargada por completo.
+</p>
+
+<br> <br>
+<p>Esta es la manera recomendada de utilizar estilos CSS en nuestros documentos.</p>
+<br> <br>
+
+<center><p><FONT FACE="Verdana" SIZE=4>Incluir CSS en el HTML (style)</p>
+</center>
+
+
+<p>Otra de las formas habituales que existen para incluir estilos CSS en nuestra página es la de añadirlos directamente en el documento HTML, a través de una etiqueta <code>style</code> que contendrá el código CSS:</p>
+
+
+<br> <br>
+
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Título de la página<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+      <span class="token selector">div</span> <span class="token punctuation">{</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token color">hotpink</span><span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> <span class="token color">white</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+
+<p>Este sistema puede servirnos en ciertos casos particulares, pero hay que darle prioridad al método anterior (<em>CSS externo</em>), ya que incluyendo el código CSS en el interior del archivo HTML arruinamos la posibilidad de tener el código CSS en un documento a parte, pudiendo <strong>reutilizarlo y enlazarlo</strong> desde otros documentos HTML mediante la etiqueta <code>&lt;link&gt;</code>.</p>
+
+
+
+
+<blockquote>
+<p>Aunque no es obligatorio, es muy común que las etiquetas <code>&lt;style&gt;</code> se encuentren en la cabecera <code>&lt;head&gt;</code> del documento HTML, ya que antiguamente era la única forma de hacerlo.</p>
+</blockquote>
+
+
+<center><p><FONT FACE="Verdana" SIZE=4>Estilos en línea (atributo style)</p>
+</center>
+
+<p>Por último, la tercera forma de aplicar estilos en un documento HTML es hacerlo directamente, a través del atributo style de la propia etiqueta donde queramos aplicar el estilo:</p>
+
+<br> <br>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>¡Hola <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span><span class="token color">red</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>amigo lector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+
+<br> <br>
+<p>De la misma forma que en el método anterior, se recomienda no utilizarse salvo casos muy específicos, ya que los estilos se asocian a la etiqueta en cuestión y no pueden reutilizarse. Sin embargo, es una opción que puede venir bien en algunos casos.</p>
+
+<br> <br>
+<center><p><FONT FACE="Verdana" SIZE=1>Tomado de: 
+https://lenguajecss.com/
+</p>
+</center>
+
+
+
+</h1>
+
+</body>
+
+</html>
